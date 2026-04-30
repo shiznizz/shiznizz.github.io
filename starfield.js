@@ -14,7 +14,7 @@
 
   function draw() {
     const cssW = window.innerWidth;
-    const cssH = Math.max(window.innerHeight, document.documentElement.scrollHeight);
+    const cssH = window.innerHeight;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
     canvas.width = Math.floor(cssW * dpr);

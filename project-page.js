@@ -1,3 +1,12 @@
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.scrollTo(0, 0);
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+});
+
 const gallery = document.querySelector("[data-rotating-gallery]");
 
 if (gallery) {
