@@ -4,14 +4,14 @@
   --bg-deep: #04030c;
   --panel: #12102c;
   --panel-alt: #1a1738;
-  --text: #eef1ff;
-  --muted: #9aa3c7;
-  --accent: #7eb8ff;
-  --accent-strong: #b8d9ff;
+  --text: #f7f9ff;
+  --muted: #b4bed8;
+  --accent: #8ec4ff;
+  --accent-strong: #cce8ff;
   --border: rgba(130, 150, 255, 0.22);
   --shadow: 0 16px 48px rgba(0, 0, 24, 0.55);
   --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  --glow-soft: 0 0 40px rgba(126, 184, 255, 0.15);
+  --glow-soft: 0 0 28px rgba(126, 184, 255, 0.1);
 }
 
 * {
@@ -32,27 +32,14 @@ body {
     linear-gradient(165deg, var(--bg-deep) 0%, #0a0824 45%, var(--bg) 100%);
 }
 
-body::before {
-  content: "";
+.starfield-canvas {
   position: fixed;
   inset: 0;
   z-index: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-  background-image: radial-gradient(1.2px circle at center, rgba(255, 255, 255, 0.42), transparent 100%);
-  background-size: 64px 64px;
-  opacity: 0.36;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background-image: radial-gradient(1px circle at center, rgba(186, 200, 255, 0.38), transparent 100%);
-  background-size: 112px 112px;
-  background-position: 36px 24px;
-  opacity: 0.22;
+  opacity: 0.88;
 }
 
 body > header,
@@ -84,10 +71,9 @@ body > main {
 h1 {
   margin: 0.2rem 0 0.6rem;
   font-size: clamp(1.8rem, 4vw, 2.8rem);
-  color: #f6f8ff;
-  text-shadow:
-    0 0 24px rgba(126, 184, 255, 0.45),
-    0 0 56px rgba(139, 92, 246, 0.22);
+  color: #fcfdff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  -webkit-font-smoothing: antialiased;
 }
 
 .subtitle {
